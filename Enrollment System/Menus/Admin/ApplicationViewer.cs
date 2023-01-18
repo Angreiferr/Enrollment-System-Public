@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Windows.Forms;
-using Enrollment_System.Util;
 using Enrollment_System.Data;
+using Enrollment_System.Util;
 
-namespace Enrollment_System.Menus
+namespace Enrollment_System.Menus.Admin
 {
-    public partial class ApplicationConfrimationFrm : Form
+    public partial class ApplicationViewer : Form
     {
-        private ApplicationFormsManager applicationManager;
-        public ApplicationConfrimationFrm()
+        private ApplicationForm application;
+        public ApplicationViewer(ApplicationForm application)
         {
-            applicationManager = ApplicationFormsManager.getInstance();
+            this.application = application;
             InitializeComponent();
         }
 
-
-        private void ApplicationConfrimationFrm_Load(object sender, EventArgs e)
+        private void ApplicationView_Load(object sender, EventArgs e)
         {
-            CenterToScreen();
-            ApplicationForm application = applicationManager.getRecent();
-
             loadValues(application);
+            CenterToScreen();
         }
 
         private void loadValues(ApplicationForm application)
@@ -85,74 +82,24 @@ namespace Enrollment_System.Menus
             lblReqRecommendation.Text = requirement.RecommendationPath;
         }
 
-        private void btnStartOver_Click(object sender, EventArgs e)
+        private void btnDeny_Click(object sender, EventArgs e)
         {
-            StudentManager studentManager = StudentManager.getInstance();
-            AddressManager addressManager = AddressManager.getInstance();
-            ContactManager contactManager = ContactManager.getInstance();
-            GuardianManager guardianManager = GuardianManager.getInstance();
-            SchoolHistoryManager schoolHistoryManager = SchoolHistoryManager.getInstance();
-
-            studentManager.removeRecent();
-            addressManager.removeRecent();
-            contactManager.removeRecent();
-            guardianManager.removeRecent();
-            schoolHistoryManager.removeRecent();
-
-            this.Hide();
-            ApplicationFrm frm = new ApplicationFrm();
-            frm.ShowDialog();
+            application.Status = "Deny";
+            ApplicationFormsManager manager = ApplicationFormsManager.getInstance();
+            ApplicationHelper.updateApplicationForm(application);
+            manager.update(application);
+            MessageBox.Show("Application has been denied!", "Application Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnApprove_Click(object sender, EventArgs e)
         {
-            StudentManager studentManager = StudentManager.getInstance();
-            AddressManager addressManager = AddressManager.getInstance();
-            ContactManager contactManager = ContactManager.getInstance();
-            GuardianManager guardianManager = GuardianManager.getInstance();
-            SchoolHistoryManager schoolHistoryManager = SchoolHistoryManager.getInstance();
-            RequirementManager requirementManager = RequirementManager.getInstance();
-
-            ApplicationForm application = applicationManager.getRecent();
-            application.SubmissionDate = DateTime.Today;
-            application.Status = "Unpaid";
-            
-            if (application.IsRegular)
-                insertSubjects(application);
-            applicationManager.add(application);
-            AddressHelper.addAddress(addressManager.find(application.AddressID));
-            ApplicationHelper.addApplicationForm(application);
-            ContactHelper.addContact(contactManager.find(application.ContactID));
-            GuardianHelper.addGuardian(guardianManager.find(application.GuardianID));
-            SchoolHistoryHelper.addSchoolHistory(schoolHistoryManager.find(application.SchoolHistoryID));
-            StudentHelper.addStudent(studentManager.find(application.StudentID));
-            RequirementHelper.addRequirement(requirementManager.find(application.RequirementID));
-            ApplicationSystemDataHelper.addApplicationSubject(application);
-            //ApplicationSystemDataHelper.addApplicationSchedule(application); //Commented for now
-            
-
-            MessageBox.Show("Application with the ID of " + application.ID + " and Student ID of " + application.StudentID + " has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Hide();
-            StatusFrm frm = new StatusFrm(application);
-            frm.ShowDialog();
+            application.Status = "Approved";
+            ApplicationFormsManager manager = ApplicationFormsManager.getInstance();
+            ApplicationHelper.updateApplicationForm(application);
+            manager.update(application);
+            MessageBox.Show("Application has been approed!", "Application Approved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-        }
-
-        private void insertSubjects(ApplicationForm application)
-        {
-            SubjectManager manager = SubjectManager.getInstance();
-            for(int i = 0; i < manager.subjects.Count; i++)
-            {
-                Subject subject = manager.findByIndex(i);
-                if (!subject.YearLevel.Equals(application.YearLevel))
-                    return;
-
-                if (!subject.Term.Equals(application.Term))
-                    return;
-                application.SubjectIDs.Add(subject.ID);
-            }
         }
     }
 }

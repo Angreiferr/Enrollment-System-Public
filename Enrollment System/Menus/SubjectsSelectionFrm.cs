@@ -58,17 +58,6 @@ namespace Enrollment_System.Menus
                     application.SubjectIDs.Add(subject.ID);
                 }
             }
-            for (int i = 0; i < lvSubjects.SelectedItems.Count; i++)
-            {
-                SubjectManager manager = SubjectManager.getInstance();
-                ListViewItem item = (ListViewItem)list[i];
-                Subject subject = manager.findByName(item.ToString());
-                if (subject != null)
-                {
-                    Console.WriteLine("Running");
-                    application.SubjectIDs.Add(subject.ID);
-                }
-            }
 
             btnSched.Enabled = false;
             openScheduleForms();

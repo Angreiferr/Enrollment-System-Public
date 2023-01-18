@@ -38,8 +38,7 @@ namespace Enrollment_System.Menus
             int otherSchoolFees = 5000;
             int miscFees = 5000;
             int TotalFee = total + otherSchoolFees + miscFees;
-
-            lblUnits.Text = "" + unitsCount;
+            
             lblTuition.Text = "" + total;
             lblOther.Text = "" + otherSchoolFees;
             lblMisc.Text = "" + miscFees;

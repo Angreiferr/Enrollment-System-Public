@@ -102,8 +102,7 @@ namespace Enrollment_System.Menus
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            ApplicationView frm = new ApplicationView();
-            frm.ShowDialog();
+            new ApplicationViewPicker().ShowDialog();
         }
 
         private void btnRemoveApp_Click(object sender, EventArgs e)

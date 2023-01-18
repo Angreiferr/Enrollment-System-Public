@@ -37,6 +37,9 @@ namespace Enrollment_System.Menus
                 case "Approved":
                     lblStatus.ForeColor = Color.Green;
                     break;
+                case "Denied":
+                    lblStatus.ForeColor = Color.Red;
+                    break;
             }
             lblStatus.Text = status;
         }
