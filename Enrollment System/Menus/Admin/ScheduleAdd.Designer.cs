@@ -41,6 +41,7 @@
             // 
             // cbDay
             // 
+            this.cbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDay.FormattingEnabled = true;
             this.cbDay.Location = new System.Drawing.Point(12, 70);
             this.cbDay.Name = "cbDay";
@@ -58,6 +59,7 @@
             // 
             // cbEndTime
             // 
+            this.cbEndTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEndTime.FormattingEnabled = true;
             this.cbEndTime.Location = new System.Drawing.Point(257, 70);
             this.cbEndTime.Name = "cbEndTime";
@@ -66,6 +68,7 @@
             // 
             // cbStartTime
             // 
+            this.cbStartTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStartTime.FormattingEnabled = true;
             this.cbStartTime.Location = new System.Drawing.Point(257, 23);
             this.cbStartTime.Name = "cbStartTime";
@@ -93,6 +96,7 @@
             // 
             // cbSubjectID
             // 
+            this.cbSubjectID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSubjectID.FormattingEnabled = true;
             this.cbSubjectID.Location = new System.Drawing.Point(12, 23);
             this.cbSubjectID.Name = "cbSubjectID";

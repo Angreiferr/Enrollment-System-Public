@@ -48,7 +48,9 @@ namespace Enrollment_System.Menus
             }
             for(int i = 0; i < lvSubjects.SelectedItems.Count; i++)
             {
-                application.SubjectIDs.Add(lvSubjects.SelectedItems[i]);
+                SubjectManager manager = SubjectManager.getInstance();
+                Subject subject = manager.findByName(lvSubjects.SelectedItems[i].ToString());
+                application.SubjectIDs.Add(subject.ID);
             }
             ApplicationFormsManager applicationFormsManager = ApplicationFormsManager.getInstance();
 

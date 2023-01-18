@@ -22,13 +22,8 @@ namespace Enrollment_System.Menus
             SubjectList.ReadOnly = true;
             ScheduleList.ReadOnly = true;
             updateTables(sender, e);
-
-            Timer timer = new Timer();
-            timer.Interval = (1 * 15000);
-            timer.Tick += new System.EventHandler(this.updateTables);
-            timer.Start();
         }
-
+        
         private void updateTables(object sender, EventArgs e)
         {
             AppList.DataSource = DatabaseHelper.getApplications().Tables[0];
@@ -144,6 +139,11 @@ namespace Enrollment_System.Menus
         }
 
         private void btnRefresh4_Click(object sender, EventArgs e)
+        {
+            updateTables(sender, e);
+        }
+
+        private void AdminFrm_Activated(object sender, EventArgs e)
         {
             updateTables(sender, e);
         }

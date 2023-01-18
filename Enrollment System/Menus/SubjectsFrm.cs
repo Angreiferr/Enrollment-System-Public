@@ -32,8 +32,10 @@ namespace Enrollment_System.Menus
             SubjectManager manager = SubjectManager.getInstance();
             for (int i = 0; i < application.SubjectIDs.Count; i++)
             {
-                Subject subject = manager.find((int) application.SubjectIDs[i]);
-                lvSubjects.Items.Add(subject.Name + " | Units: " + subject.Units);
+                if (application.SubjectIDs[i] != null) {
+                    Subject subject = manager.find((int) application.SubjectIDs[i]);
+                    lvSubjects.Items.Add(subject.Name + " | Units: " + subject.Units);
+                }
             }
         }
 

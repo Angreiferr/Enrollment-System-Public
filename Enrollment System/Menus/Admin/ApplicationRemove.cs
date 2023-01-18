@@ -61,7 +61,8 @@ namespace Enrollment_System.Menus.Admin
             SchoolHistoryHelper.removeSchoolHistory(application.SchoolHistoryID);
             RequirementManager manager = RequirementManager.getInstance();
             Requirement requirement = manager.find(application.RequirementID);
-            RequirementHelper.removeRequirement(requirement);
+            if(requirement != null)
+                RequirementHelper.removeRequirement(requirement);
             manager.remove(requirement.ID);
 
             AddressManager addressManager = AddressManager.getInstance();

@@ -76,6 +76,7 @@ namespace Enrollment_System.Menus
             ContactManager contactManager = ContactManager.getInstance();
             GuardianManager guardianManager = GuardianManager.getInstance();
             SchoolHistoryManager schoolHistoryManager = SchoolHistoryManager.getInstance();
+            RequirementManager requirementManager = RequirementManager.getInstance();
 
             ApplicationForm application = applicationManager.getRecent();
             application.SubmissionDate = DateTime.Today;
@@ -90,6 +91,7 @@ namespace Enrollment_System.Menus
             GuardianHelper.addGuardian(guardianManager.find(application.GuardianID));
             SchoolHistoryHelper.addSchoolHistory(schoolHistoryManager.find(application.SchoolHistoryID));
             StudentHelper.addStudent(studentManager.find(application.StudentID));
+            RequirementHelper.addRequirement(requirementManager.find(application.RequirementID));
             ApplicationSystemDataHelper.addApplicationSubject(application);
             ApplicationSystemDataHelper.addApplicationSchedule(application);
             
