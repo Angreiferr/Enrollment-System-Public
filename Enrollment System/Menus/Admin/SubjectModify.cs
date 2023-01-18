@@ -83,7 +83,7 @@ namespace Enrollment_System.Menus.Admin
                 return;
             }
             manager.update(subject);
-            DatabaseHelper.updateSubject(subject);
+            SubjectHelper.updateSubject(subject);
 
             MessageBox.Show("Subject " + subject.ID + " successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateList();

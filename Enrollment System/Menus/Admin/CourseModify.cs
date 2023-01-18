@@ -48,7 +48,7 @@ namespace Enrollment_System.Menus.Admin
             Course course = manager.find(Convert.ToInt32(cbID.Text.ToString()));
             course.Name = tbName.Text.ToString();
             manager.update(course);
-            DatabaseHelper.updateCourses(course);
+            CourseHelper.updateCourses(course);
             
             MessageBox.Show("Course " + course.ID + " successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateList();

@@ -230,7 +230,19 @@
     <Compile Include="Resources\Classes\Rbutton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Util\AddressHelper.cs" />
+    <Compile Include="Util\AdminHelper.cs" />
+    <Compile Include="Util\ApplicationHelper.cs" />
+    <Compile Include="Util\ApplicationSystemDataHelper.cs" />
+    <Compile Include="Util\ContactHelper.cs" />
+    <Compile Include="Util\CourseHelper.cs" />
     <Compile Include="Util\DatabaseHelper.cs" />
+    <Compile Include="Util\GuardianHelper.cs" />
+    <Compile Include="Util\RequirementHelper.cs" />
+    <Compile Include="Util\ScheduleHelper.cs" />
+    <Compile Include="Util\SchoolHistoryHelper.cs" />
+    <Compile Include="Util\StudentHelper.cs" />
+    <Compile Include="Util\SubjectHelper.cs" />
     <EmbeddedResource Include="DashboardFrm.resx">
       <DependentUpon>DashboardFrm.cs</DependentUpon>
     </EmbeddedResource>

@@ -84,14 +84,14 @@ namespace Enrollment_System.Menus
             if (application.IsRegular)
                 insertSubjects(application);
             applicationManager.add(application);
-            DatabaseHelper.addAddress(addressManager.find(application.AddressID));
-            DatabaseHelper.addApplicationForm(application);
-            DatabaseHelper.addContact(contactManager.find(application.ContactID));
-            DatabaseHelper.addGuardian(guardianManager.find(application.GuardianID));
-            DatabaseHelper.addSchoolHistory(schoolHistoryManager.find(application.SchoolHistoryID));
-            DatabaseHelper.addStudent(studentManager.find(application.StudentID));
-            DatabaseHelper.addApplicationSubject(application);
-            DatabaseHelper.addApplicationSchedule(application);
+            AddressHelper.addAddress(addressManager.find(application.AddressID));
+            ApplicationHelper.addApplicationForm(application);
+            ContactHelper.addContact(contactManager.find(application.ContactID));
+            GuardianHelper.addGuardian(guardianManager.find(application.GuardianID));
+            SchoolHistoryHelper.addSchoolHistory(schoolHistoryManager.find(application.SchoolHistoryID));
+            StudentHelper.addStudent(studentManager.find(application.StudentID));
+            ApplicationSystemDataHelper.addApplicationSubject(application);
+            ApplicationSystemDataHelper.addApplicationSchedule(application);
             
 
             MessageBox.Show("Application with the ID of " + application.ID + " has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

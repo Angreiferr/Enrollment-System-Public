@@ -376,14 +376,14 @@ namespace Enrollment_System.Menus.Admin
             historyManager.add(schoolHistory);
             guardianManager.add(guardian);
             requirementManager.add(requirement);
-            DatabaseHelper.addAddress(address);
-            DatabaseHelper.addApplicationForm(application);
-            DatabaseHelper.addContact(contact);
-            DatabaseHelper.addGuardian(guardian);
-            DatabaseHelper.addSchoolHistory(schoolHistory);
-            DatabaseHelper.addStudent(student);
-            DatabaseHelper.addApplicationSubject(application);
-            DatabaseHelper.addApplicationSchedule(application);
+            AddressHelper.addAddress(address);
+            ApplicationHelper.addApplicationForm(application);
+            ContactHelper.addContact(contact);
+            GuardianHelper.addGuardian(guardian);
+            SchoolHistoryHelper.addSchoolHistory(schoolHistory);
+            StudentHelper.addStudent(student);
+            ApplicationSystemDataHelper.addApplicationSubject(application);
+            ApplicationSystemDataHelper.addApplicationSchedule(application);
 
             //TODO: Add database helper that insert the values to the database.
 

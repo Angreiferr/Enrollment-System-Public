@@ -164,7 +164,7 @@ namespace Enrollment_System.Menus.Admin
             schedule.StartTime = cbStartTime.Text.ToString();
             schedule.EndTime = cbEndTime.Text.ToString();
             manager.update(schedule);
-            DatabaseHelper.updateSchedule(schedule);
+            ScheduleHelper.updateSchedule(schedule);
 
             MessageBox.Show("Schedule " + schedule.ID + " successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateList();

@@ -54,7 +54,7 @@ namespace Enrollment_System.Menus
             application.Status = "Paid";
             ApplicationFormsManager applicationFormsManager = ApplicationFormsManager.getInstance();
             applicationFormsManager.update(application);
-            DatabaseHelper.updateApplicationForm(application);
+            ApplicationHelper.updateApplicationForm(application);
 
             this.Hide();
             DashboardFrm frm = new DashboardFrm();

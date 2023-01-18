@@ -33,9 +33,9 @@ namespace Enrollment_System.Data
 
         public int getRecentID()
         {
-            if (DatabaseHelper.getRecentSubjectID() == 1)
+            if (SubjectHelper.getRecentSubjectID() == 1)
                 return 0;
-            return DatabaseHelper.getRecentSubjectID();
+            return SubjectHelper.getRecentSubjectID();
         }
 
         public void removeRecent()
