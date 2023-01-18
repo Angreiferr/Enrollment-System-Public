@@ -64,6 +64,7 @@ namespace Enrollment_System.Menus.Admin
 
             manager.remove(ID);
             MessageBox.Show("Course " + course.ID + " successfully removed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

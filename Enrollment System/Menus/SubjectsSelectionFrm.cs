@@ -46,15 +46,16 @@ namespace Enrollment_System.Menus
                 MessageBox.Show("No subject is selected!", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            for(int i = 0; i < lvSubjects.SelectedItems.Count; i++)
+            for (int i = 0; i < lvSubjects.SelectedItems.Count; i++)
             {
                 SubjectManager manager = SubjectManager.getInstance();
                 Subject subject = manager.findByName(lvSubjects.SelectedItems[i].ToString());
-                application.SubjectIDs.Add(subject.ID);
+                if (subject != null)
+                {
+                    application.SubjectIDs.Add(subject.ID);
+                }
             }
-            ApplicationFormsManager applicationFormsManager = ApplicationFormsManager.getInstance();
-
-            applicationFormsManager.add(application);
+            
             btnSched.Enabled = false;
             openScheduleForms();
             btnProceed.Enabled = true;

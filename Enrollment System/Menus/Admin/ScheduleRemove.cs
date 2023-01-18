@@ -60,6 +60,7 @@ namespace Enrollment_System.Menus.Admin
             manager.remove(ID);
             MessageBox.Show("Schedule " + schedule.ID + " successfully removed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateList();
+            this.Close();
         }
     }
 }

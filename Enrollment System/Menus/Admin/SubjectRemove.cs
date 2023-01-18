@@ -61,6 +61,7 @@ namespace Enrollment_System.Menus.Admin
             manager.remove(ID);
             MessageBox.Show("Subject " + subject.ID + " successfully removed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateList();
+            this.Close();
         }
     }
 }

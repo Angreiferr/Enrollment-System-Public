@@ -34,10 +34,20 @@ namespace Enrollment_System.Menus
             requirement.RecommendationPath = lblRecomendation.Text.ToString();
             application.RequirementID = requirement.ID;
             requirementManager.add(requirement);
-            this.Hide();
-            SubjectsFrm frm = new SubjectsFrm(application);
-            frm.ShowDialog();
-            this.Close();
+            if(application.SubjectIDs.Count > 0)
+            {
+                this.Hide();
+                SubjectsFrm frm = new SubjectsFrm(application);
+                frm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                ApplicationConfrimationFrm frm = new ApplicationConfrimationFrm();
+                frm.ShowDialog();
+                this.Close();
+            }
         }
 
         private void btnPicture_Click(object sender, EventArgs e)

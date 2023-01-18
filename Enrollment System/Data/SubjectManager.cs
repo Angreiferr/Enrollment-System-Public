@@ -67,7 +67,9 @@ namespace Enrollment_System.Data
             {
                 Subject s = (Subject)subjects[i];
                 if (s.Name.Equals(Name))
+                {
                     return s;
+                }
             }
             return null;
         }

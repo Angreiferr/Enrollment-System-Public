@@ -77,6 +77,7 @@ namespace Enrollment_System.Menus.Admin
             
             applicationFormsManager.remove(ID);
             updateList();
+            this.Close();
         }
     }
 }
