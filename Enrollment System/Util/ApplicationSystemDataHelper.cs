@@ -54,7 +54,7 @@ namespace Enrollment_System.Util
                 (
                     [ID] INT NOT NULL IDENTITY(1,1),
                     [ApplicationID] INT NOT NULL,
-                    [SubjectID] INT NOT NULL,
+                    [ScheduleID] INT NOT NULL,
                     [Schedule] NCHAR(30) NOT NULL,
                     PRIMARY KEY (ID)
                 )";

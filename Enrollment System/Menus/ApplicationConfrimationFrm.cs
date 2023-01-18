@@ -93,10 +93,10 @@ namespace Enrollment_System.Menus
             StudentHelper.addStudent(studentManager.find(application.StudentID));
             RequirementHelper.addRequirement(requirementManager.find(application.RequirementID));
             ApplicationSystemDataHelper.addApplicationSubject(application);
-            ApplicationSystemDataHelper.addApplicationSchedule(application);
+            //ApplicationSystemDataHelper.addApplicationSchedule(application); //Commented for now
             
 
-            MessageBox.Show("Application with the ID of " + application.ID + " has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Application with the ID of " + application.ID + " and Student ID of " + application.StudentID + " has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Hide();
             StatusFrm frm = new StatusFrm(application);

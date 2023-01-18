@@ -106,7 +106,7 @@ namespace Enrollment_System.Menus
             cbSchoolType.Items.Add("Masteral");
             cbSchoolType.Items.Add("Doctorial");
             cbRegular.Items.Add("Regular");
-            cbRegular.Items.Add("Iregular");
+            cbRegular.Items.Add("Irregular");
         }
 
         //A bit messy but does the job done for now.
@@ -365,7 +365,7 @@ namespace Enrollment_System.Menus
             if(application.IsRegular)
                 cbExRegular.SelectedIndex = cbExRegular.FindStringExact("Regular");
             else
-                cbExRegular.SelectedIndex = cbExRegular.FindStringExact("Iregular");
+                cbExRegular.SelectedIndex = cbExRegular.FindStringExact("Irregular");
 
 
             tbExFirstName.Text = student.FirstName;
@@ -440,7 +440,7 @@ namespace Enrollment_System.Menus
             cbExSY.Items.Add("2023-2024");
             cbExTerm.Items.Add("");
             cbExRegular.Items.Add("Regular");
-            cbExRegular.Items.Add("Iregular");
+            cbExRegular.Items.Add("Irregular");
 
             if (application.Course.Equals(cbExCourse.Text.ToString()) && application.SchoolYear.Equals("Fourth Year Level"))
                 return;

@@ -133,7 +133,7 @@ namespace Enrollment_System.Menus.Admin
             cbSY.Items.Add("2023-2024");
             cbTerm.Items.Add("");
             cbRegular.Items.Add("Regular");
-            cbRegular.Items.Add("Iregular");
+            cbRegular.Items.Add("Irregular");
 
 
             if (application != null)
@@ -167,7 +167,7 @@ namespace Enrollment_System.Menus.Admin
             if (application.IsRegular)
                 cbRegular.SelectedIndex = cbRegular.FindStringExact("Regular");
             else
-                cbRegular.SelectedIndex = cbRegular.FindStringExact("Iregular");
+                cbRegular.SelectedIndex = cbRegular.FindStringExact("Irregular");
 
 
             tbFName.Text = student.FirstName;
