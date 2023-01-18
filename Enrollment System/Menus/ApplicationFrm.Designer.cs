@@ -939,6 +939,7 @@
             this.tbProvince.Name = "tbProvince";
             this.tbProvince.Size = new System.Drawing.Size(100, 20);
             this.tbProvince.TabIndex = 44;
+            this.tbProvince.TextChanged += new System.EventHandler(this.tbProvince_TextChanged);
             // 
             // label25
             // 
@@ -955,6 +956,7 @@
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(100, 20);
             this.tbCity.TabIndex = 42;
+            this.tbCity.TextChanged += new System.EventHandler(this.tbCity_TextChanged);
             // 
             // label24
             // 
@@ -1046,6 +1048,7 @@
             this.tbReligion.Name = "tbReligion";
             this.tbReligion.Size = new System.Drawing.Size(279, 20);
             this.tbReligion.TabIndex = 31;
+            this.tbReligion.TextChanged += new System.EventHandler(this.tbReligion_TextChanged);
             // 
             // label18
             // 
@@ -1062,6 +1065,7 @@
             this.tbBirthplace.Name = "tbBirthplace";
             this.tbBirthplace.Size = new System.Drawing.Size(284, 20);
             this.tbBirthplace.TabIndex = 29;
+            this.tbBirthplace.TextChanged += new System.EventHandler(this.tbBirthplace_TextChanged);
             // 
             // label17
             // 
@@ -1096,6 +1100,7 @@
             this.tbCitizenship.Name = "tbCitizenship";
             this.tbCitizenship.Size = new System.Drawing.Size(100, 20);
             this.tbCitizenship.TabIndex = 25;
+            this.tbCitizenship.TextChanged += new System.EventHandler(this.tbCitizenship_TextChanged);
             // 
             // label15
             // 
@@ -1164,6 +1169,7 @@
             this.tbLName.Name = "tbLName";
             this.tbLName.Size = new System.Drawing.Size(100, 20);
             this.tbLName.TabIndex = 17;
+            this.tbLName.TextChanged += new System.EventHandler(this.tbLName_TextChanged);
             // 
             // label11
             // 
@@ -1180,6 +1186,7 @@
             this.tbMName.Name = "tbMName";
             this.tbMName.Size = new System.Drawing.Size(100, 20);
             this.tbMName.TabIndex = 15;
+            this.tbMName.TextChanged += new System.EventHandler(this.tbMName_TextChanged);
             // 
             // label10
             // 

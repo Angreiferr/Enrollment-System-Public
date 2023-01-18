@@ -741,7 +741,75 @@ namespace Enrollment_System.Menus
 
         private void tbFName_TextChanged(object sender, EventArgs e)
         {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbFName.Text, "[^A-Z,a-z ]"))
+            {
 
+                tbFName.Text = tbFName.Text.Remove(tbFName.Text.Length - 1);
+            }
         }
+
+        private void tbMName_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbMName.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbMName.Text = tbMName.Text.Remove(tbMName.Text.Length - 1);
+            }
+        }
+
+        private void tbLName_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbLName.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbLName.Text = tbLName.Text.Remove(tbLName.Text.Length - 1);
+            }
+        }
+
+        private void tbCitizenship_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbCitizenship.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbCitizenship.Text = tbCitizenship.Text.Remove(tbCitizenship.Text.Length - 1);
+            }
+        }
+
+        private void tbBirthplace_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbBirthplace.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbBirthplace.Text = tbBirthplace.Text.Remove(tbBirthplace.Text.Length - 1);
+            }
+        }
+
+        private void tbReligion_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbReligion.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbReligion.Text = tbReligion.Text.Remove(tbReligion.Text.Length - 1);
+            }
+        }
+
+        private void tbCity_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbCity.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbCity.Text = tbCity.Text.Remove(tbReligion.Text.Length - 1);
+            }
+        }
+
+        private void tbProvince_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbProvince.Text, "[^A-Z,a-z ]"))
+            {
+
+                tbProvince.Text = tbProvince.Text.Remove(tbProvince.Text.Length - 1);
+            }
+        }
+       
     }
 }
