@@ -23,9 +23,18 @@ namespace Enrollment_System.Menus
 
         private void SubjectsFrm_Load(object sender, EventArgs e)
         {
-            SubjectList.ReadOnly = true;
-            SubjectList.DataSource = DatabaseHelper.getApplicationSubjec(application.ID).Tables[0];
+            loadSubjectList();
             CenterToScreen();
+        }
+
+        private void loadSubjectList()
+        {
+            SubjectManager manager = SubjectManager.getInstance();
+            for (int i = 0; i < application.SubjectIDs.Count; i++)
+            {
+                Subject subject = manager.find((int) application.SubjectIDs[i]);
+                lvSubjects.Items.Add(subject.Name + " | Units: " + subject.Units);
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

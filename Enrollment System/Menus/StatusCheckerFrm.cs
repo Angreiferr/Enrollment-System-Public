@@ -23,6 +23,12 @@ namespace Enrollment_System.Menus
             ApplicationFormsManager applicationFormsManager = ApplicationFormsManager.getInstance();
             ApplicationForm application = applicationFormsManager.find(Convert.ToInt32(tbAppID.Text));
 
+            if(application == null)
+            {
+                MessageBox.Show("Application ID not found! Please check your application ID!", "Application ID not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             this.Hide();
             StatusFrm frm = new StatusFrm(application);
             frm.ShowDialog();

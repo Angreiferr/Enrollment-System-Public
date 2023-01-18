@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SubjectList = new System.Windows.Forms.DataGridView();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.SubjectList)).BeginInit();
+            this.lvSubjects = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // SubjectList
-            // 
-            this.SubjectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SubjectList.Location = new System.Drawing.Point(10, 101);
-            this.SubjectList.Name = "SubjectList";
-            this.SubjectList.Size = new System.Drawing.Size(428, 220);
-            this.SubjectList.TabIndex = 2;
             // 
             // btnConfirm
             // 
@@ -62,27 +53,35 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Subjects";
             // 
+            // lvSubjects
+            // 
+            this.lvSubjects.HideSelection = false;
+            this.lvSubjects.Location = new System.Drawing.Point(10, 101);
+            this.lvSubjects.Name = "lvSubjects";
+            this.lvSubjects.Size = new System.Drawing.Size(428, 216);
+            this.lvSubjects.TabIndex = 6;
+            this.lvSubjects.UseCompatibleStateImageBehavior = false;
+            this.lvSubjects.View = System.Windows.Forms.View.List;
+            // 
             // SubjectsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 361);
+            this.Controls.Add(this.lvSubjects);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.SubjectList);
             this.Name = "SubjectsFrm";
             this.Text = "Student Subjects Details";
             this.Load += new System.EventHandler(this.SubjectsFrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SubjectList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView SubjectList;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvSubjects;
     }
 }

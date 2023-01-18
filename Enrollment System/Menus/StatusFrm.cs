@@ -23,6 +23,9 @@ namespace Enrollment_System.Menus
         private void ApplicationStatus_Load(object sender, EventArgs e)
         {
             updateStatus();
+            String status = lblStatus.Text.ToString();
+            if (status.Equals("Paid") || status.Equals("Approved"))
+                btnPayment.Enabled = false;
             CenterToScreen();
         }
 
