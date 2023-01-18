@@ -34,7 +34,7 @@ namespace Enrollment_System.Menus.Admin
             Contact contact = contactManager.find(application.ContactID);
             SchoolHistory schoolHistory = schoolHistoryManager.find(application.SchoolHistoryID);
             Guardian guardian = guardianManager.find(application.GuardianID);
-            Requirement requirement = requirementManager.find(application.GuardianID);
+            Requirement requirement = requirementManager.find(application.RequirementID);
 
             lbl_Course.Text = application.Course;
             lbl_Schoolyear.Text = application.SchoolYear;

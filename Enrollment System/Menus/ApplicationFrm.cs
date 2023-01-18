@@ -578,9 +578,9 @@ namespace Enrollment_System.Menus
             application = applicationFormsManager.find(stud.ApplicationID);
             application.ID = application.ID + 1;
             student.ApplicationID = application.ID;
-            application.AddressID = address.ID;
-            application.StudentID = student.ID;
-            application.ContactID = contact.ID;
+            address.ID = application.AddressID;
+            student.ID = application.StudentID;
+            contact.ID = application.ContactID;
             application.SchoolYear = schoolYear;
             application.Course = course;
             application.Term = term;
