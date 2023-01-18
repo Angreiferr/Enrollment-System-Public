@@ -138,7 +138,7 @@
             this.btnGoodMoral.Location = new System.Drawing.Point(169, 159);
             this.btnGoodMoral.Name = "btnGoodMoral";
             this.btnGoodMoral.Size = new System.Drawing.Size(75, 23);
-            this.btnGoodMoral.TabIndex = 10;
+            this.btnGoodMoral.TabIndex = 7;
             this.btnGoodMoral.Text = "Upload";
             this.btnGoodMoral.UseVisualStyleBackColor = true;
             this.btnGoodMoral.Click += new System.EventHandler(this.btnGoodMoral_Click);
@@ -167,7 +167,7 @@
             this.btnRecommendation.Location = new System.Drawing.Point(169, 188);
             this.btnRecommendation.Name = "btnRecommendation";
             this.btnRecommendation.Size = new System.Drawing.Size(75, 23);
-            this.btnRecommendation.TabIndex = 13;
+            this.btnRecommendation.TabIndex = 8;
             this.btnRecommendation.Text = "Upload";
             this.btnRecommendation.UseVisualStyleBackColor = true;
             this.btnRecommendation.Click += new System.EventHandler(this.btnRecommendation_Click);

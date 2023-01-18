@@ -35,11 +35,15 @@
             this.lblTuition = new System.Windows.Forms.Label();
             this.lblOther = new System.Windows.Forms.Label();
             this.lblMisc = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblUnits = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(81, 113);
+            this.btnPay.Location = new System.Drawing.Point(79, 154);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(75, 23);
             this.btnPay.TabIndex = 0;
@@ -59,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 50);
+            this.label2.Location = new System.Drawing.Point(23, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 79);
+            this.label3.Location = new System.Drawing.Point(23, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 3;
@@ -86,7 +90,7 @@
             // lblOther
             // 
             this.lblOther.AutoSize = true;
-            this.lblOther.Location = new System.Drawing.Point(158, 50);
+            this.lblOther.Location = new System.Drawing.Point(158, 70);
             this.lblOther.Name = "lblOther";
             this.lblOther.Size = new System.Drawing.Size(44, 13);
             this.lblOther.TabIndex = 5;
@@ -95,17 +99,57 @@
             // lblMisc
             // 
             this.lblMisc.AutoSize = true;
-            this.lblMisc.Location = new System.Drawing.Point(158, 79);
+            this.lblMisc.Location = new System.Drawing.Point(158, 99);
             this.lblMisc.Name = "lblMisc";
             this.lblMisc.Size = new System.Drawing.Size(44, 13);
             this.lblMisc.TabIndex = 6;
             this.lblMisc.Text = "variable";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Subject Units:";
+            // 
+            // lblUnits
+            // 
+            this.lblUnits.AutoSize = true;
+            this.lblUnits.Location = new System.Drawing.Point(158, 45);
+            this.lblUnits.Name = "lblUnits";
+            this.lblUnits.Size = new System.Drawing.Size(44, 13);
+            this.lblUnits.TabIndex = 8;
+            this.lblUnits.Text = "variable";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(158, 124);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(44, 13);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "variable";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(87, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Total:";
+            // 
             // PaymentFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 158);
+            this.ClientSize = new System.Drawing.Size(236, 189);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblUnits);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblMisc);
             this.Controls.Add(this.lblOther);
             this.Controls.Add(this.lblTuition);
@@ -130,5 +174,9 @@
         private System.Windows.Forms.Label lblTuition;
         private System.Windows.Forms.Label lblOther;
         private System.Windows.Forms.Label lblMisc;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblUnits;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label6;
     }
 }

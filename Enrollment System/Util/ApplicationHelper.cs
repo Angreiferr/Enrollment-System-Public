@@ -163,7 +163,7 @@ namespace Enrollment_System.Util
 
         public static int getRecentApplicationID()
         {
-            SqlConnection connection = DatabaseHelper.getSystemConnection();
+            SqlConnection connection = DatabaseHelper.getApplicationConnection();
             String query = @"SELECT IDENT_CURRENT ('Applications')";
             int ID = 0;
             connection.Open();

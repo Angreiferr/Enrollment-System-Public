@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Enrollment_System.Data;
+using Enrollment_System.Util;
 
 namespace Enrollment_System.Menus
 {
@@ -22,8 +23,17 @@ namespace Enrollment_System.Menus
 
         private void SubjectsFrm_Load(object sender, EventArgs e)
         {
-            //TODO: Change into a dataviewmodel
+            SubjectList.ReadOnly = true;
+            SubjectList.DataSource = DatabaseHelper.getApplicationSubjec(application.ID).Tables[0];
             CenterToScreen();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ApplicationConfrimationFrm frm = new ApplicationConfrimationFrm();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -82,5 +82,17 @@ namespace Enrollment_System.Util
             dataAdapter.Fill(ds);
             return ds;
         }
+
+        public static DataSet getSubjectList(int ApplicationID)
+        {
+
+            String select = "SELECT * FROM ApplicationSubjects WHERE ApplicationID = " + ApplicationID;
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(select, getApplicationConnection());
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            return ds;
+        }
     }
 }

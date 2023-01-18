@@ -738,5 +738,10 @@ namespace Enrollment_System.Menus
                 tbExID.Text = tbExID.Text.Remove(tbExID.Text.Length - 1);
             }
         }
+
+        private void tbFName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

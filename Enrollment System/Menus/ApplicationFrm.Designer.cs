@@ -1196,6 +1196,7 @@
             this.tbFName.Name = "tbFName";
             this.tbFName.Size = new System.Drawing.Size(100, 20);
             this.tbFName.TabIndex = 13;
+            this.tbFName.TextChanged += new System.EventHandler(this.tbFName_TextChanged);
             // 
             // label9
             // 
