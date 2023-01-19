@@ -42,15 +42,19 @@
             this.tbUsername.Size = new System.Drawing.Size(183, 20);
             this.tbUsername.TabIndex = 0;
             this.tbUsername.Text = "Username";
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
+            this.tbUsername.Enter += new System.EventHandler(this.tbUsername_Enter);
+            this.tbUsername.Leave += new System.EventHandler(this.tbUsername_Leave);
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(28, 153);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(183, 20);
             this.tbPassword.TabIndex = 1;
             this.tbPassword.Text = "Password";
+            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // btnLogin
             // 

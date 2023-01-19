@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using Enrollment_System.Data;
+using System.Drawing;
+
 
 namespace Enrollment_System.Menus
 {
@@ -34,6 +36,47 @@ namespace Enrollment_System.Menus
         private void AdminAuthFrm_Load(object sender, EventArgs e)
         {
             CenterToScreen();
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_Enter(object sender, EventArgs e)
+        {
+            if(tbUsername.Text == "Username")
+            {
+                tbUsername.Text = "";
+                tbUsername.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if(tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+                tbPassword.ForeColor = Color.Silver;
+            }
+        }
+
+        private void tbUsername_Leave(object sender, EventArgs e)
+        {
+            if (tbUsername.Text == "")
+            {
+                tbUsername.Text = "Username";
+                tbUsername.ForeColor = Color.Silver;
+            }
+        }
+
+        private void tbPassword_Enter(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+            {
+                tbPassword.Text = "";
+                tbPassword.ForeColor = Color.Black;
+            }
         }
     }
 }
